@@ -1,0 +1,30 @@
+{
+  "name": "dog-tag-qr",
+  "version": "1.0.0",
+  "description": "Desktop app to generate QR codes for lost dog tags",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.dog.qr",
+    "productName": "DogTagQR",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "devDependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^24.14.1"
+  }
+}
